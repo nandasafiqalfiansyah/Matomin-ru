@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple CRUD with Fetch API</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 p-6">
+    <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md">
+      <h1 class="text-2xl font-bold mb-4">Simple CRUD with Fetch API</h1>
+
+      <!-- Form for entering API URL -->
+      <form id="api-url-form" class="mb-6">
+        <div class="mb-4">
+          <label for="api-url" class="block text-sm font-medium text-gray-700"
+            >API URL</label
+          >
+          <input
+            type="text"
+            id="api-url"
+            class="mt-1 block w-full border border-gray-300 rounded-md p-2"
+            placeholder="Enter API URL"
+          />
+        </div>
+        <button
+          type="submit"
+          class="bg-blue-500 text-white px-4 py-2 rounded-md"
+        >
+          Set API URL
+        </button>
+      </form>
+
+      <!-- Form for adding/updating data -->
+      <form id="data-form" class="mb-6 hidden">
+        <input type="hidden" id="data-id" />
+        <div class="mb-4">
+          <label for="data-name" class="block text-sm font-medium text-gray-700"
+            >Name</label
+          >
+          <input
+            type="text"
+            id="data-name"
+            class="mt-1 block w-full border border-gray-300 rounded-md p-2"
+          />
+        </div>
+        <div class="mb-4">
+          <label
+            for="data-value"
+            class="block text-sm font-medium text-gray-700"
+            >Value</label
+          >
+          <input
+            type="text"
+            id="data-value"
+            class="mt-1 block w-full border border-gray-300 rounded-md p-2"
+          />
+        </div>
+        <button
+          type="submit"
+          class="bg-blue-500 text-white px-4 py-2 rounded-md"
+        >
+          Submit
+        </button>
+      </form>
+
+      <!-- Container for displaying data -->
+      <div id="data-container" class="space-y-4"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
